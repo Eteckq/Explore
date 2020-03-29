@@ -6,6 +6,6 @@
     <a href="/articles">Articles</a>
   </li>
   <li>
-    <a href="/login">admin</a>
+    <a href="/admin/login">admin</a>
   </li>
 </ul>

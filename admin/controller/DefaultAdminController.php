@@ -4,9 +4,11 @@ require('model/AdminManager.php');
 
 class DefaultAdminController {
 	private $adminManager;
+	private $connexionManager;
 
 	function __construct(){
 		$this->adminManager = new AdminManager();
+		$this->connexionManager = new ConnexionManager();
 	}
 
 	function accueil(){
@@ -23,11 +25,13 @@ class DefaultAdminController {
 		require('view/pages/articles.php');
 	}
 	
+	//TODO
 	function addArticle($name, $desc){
 		$this->adminManager->addArticle($name, $desc);
 		header('Location: /newArticle');
 	}
 	
+	//TODO
 	function getArticle($id){
 		$article = $this->adminManager->getArticle($id);
 		//$comments = $this->adminManager->getArticleComment($id);

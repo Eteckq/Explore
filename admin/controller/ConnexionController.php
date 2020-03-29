@@ -10,7 +10,7 @@ class ConnexionController {
 
 	function connect($pseudo, $password, $stayConnected){
 		$this->connexionManager->connect($pseudo, $password, $stayConnected);
-		header('Location: /login');
+		header('Location: /admin');
 	}
 
 }

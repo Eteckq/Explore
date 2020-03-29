@@ -9,7 +9,8 @@ class AdminManager extends Manager {
 		return $db->query('SELECT * FROM accounts');
 	}
 
-	public function getAccount($id){ //Transforme un ID en user
+	//TODO
+	public function getAccount($id){
  		$db = $this->dbConnect();
 	    $req = $db->prepare('SELECT * FROM accounts WHERE id=?');
 	    $req->execute(array(
@@ -23,6 +24,7 @@ class AdminManager extends Manager {
 		return $db->query('SELECT * FROM articles');
 	}
 
+	//TODO
 	public function getArticle($id){
 		$db = $this->dbConnect();
 	    $req = $db->prepare('SELECT * FROM articles WHERE id=?');
@@ -32,6 +34,7 @@ class AdminManager extends Manager {
     	return $req->fetch();
 	}
 
+	//TODO
 	public function newArticle($name, $description){
 /* 		$db = $this->dbConnect();
 	    $req = $db->prepare('INSERT INTO `tache` (`name`, `description`) VALUES (:name, :description)');

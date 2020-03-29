@@ -7,8 +7,8 @@ class Manager {
 		return $db;
 	}
 	
-	public function getSelfUser(){ //Transforme un pseudo (string) de user en son ID correspondant
-
+	//TODO
+	public function getSelfUser(){
 		$db = $this->dbConnect();
 	    $req = $db->prepare('SELECT * FROM accounts WHERE id=?');
 	    $req->execute(array(
