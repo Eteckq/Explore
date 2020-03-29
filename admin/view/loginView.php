@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title><?= $title ?></title>
+	<title>Login</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
@@ -14,6 +14,7 @@
 
 <body>
 	<div class="container">
+		<a href="/">retour</a>
 		<h2>Connexion</h2>
 		<form class="login-form" action="/admin/connect" method="post">
 			<p class="login-form-content">Login :</p><input type="text" name="login"><br>
