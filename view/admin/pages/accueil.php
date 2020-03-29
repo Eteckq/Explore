@@ -1,9 +1,12 @@
-<?php $title = 'Liste des joueurs'; ?>
+<?php $title = 'Accueil'; ?>
 <?php ob_start(); ?>
 
 
-<p>Joueur : <?= $user['pseudo'] ?> </p>
 
+
+<div class="row text-center fill">
+	<h1>Admin accueil</h1>
+</div>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/admin/template.php'); ?>

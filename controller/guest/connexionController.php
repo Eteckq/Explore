@@ -1,27 +1,16 @@
 <?php
+require('model/guest/ConnexionManager.php');
 
+class ConnexionController {
+	private $connexionManager;
 
-function connect($pseudo, $password, $stayConnected)
-{
-    $connexionManager = new connexionManager();
-
-    $result = $connexionManager->connect($pseudo, $password, $stayConnected);
-
-    header('Location: index.php');
-
-}
-
-function regist($pseudo, $pass) {
-
-	$connexionManager = new connexionManager();
-	$result = $connexionManager->register($pseudo, $password);
-
-	if ($result == "OK") {
-		header('Location: index.php?success');
-	} else {
-		header('Location: index.php?action=register');
+	function __construct(){
+		$this->connexionManager = new ConnexionManager();
 	}
 
-	
+	function connect($pseudo, $password, $stayConnected){
+		$this->connexionManager->connect($pseudo, $password, $stayConnected);
+		header('Location: /admin');
+	}
 
 }

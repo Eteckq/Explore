@@ -4,45 +4,36 @@ require_once("model/Manager.php");
 
 class AdminManager extends Manager {
 
-
-	public function getAllUsers(){
+	public function getAccounts(){
 		$db = $this->dbConnect();
-	    $req = $db->query('SELECT * FROM users');
-	    return $req;
+		return $db->query('SELECT * FROM accounts');
 	}
 
-	public function getUserFromID($userID){ //Transforme un ID en user
-
-		$db = $this->dbConnect();
-	    $req = $db->prepare('SELECT * FROM users WHERE id=?');
+	public function getAccount($id){ //Transforme un ID en user
+ 		$db = $this->dbConnect();
+	    $req = $db->prepare('SELECT * FROM accounts WHERE id=?');
 	    $req->execute(array(
     		$userID
     	));
-    	$user = $req->fetch();
-    	return $user;
+    	return $req->fetch();
 	}
 
-	public function getProgress(){
-
+	public function getArticles(){
 		$db = $this->dbConnect();
-		$req = $db->query('SELECT * FROM tache');
-		return $req;
+		return $db->query('SELECT * FROM articles');
 	}
 
-	public function getTask($id){
-
+	public function getArticle($id){
 		$db = $this->dbConnect();
-	    $req = $db->prepare('SELECT * FROM tache WHERE id=?');
+	    $req = $db->prepare('SELECT * FROM articles WHERE id=?');
 	    $req->execute(array(
     		$id
     	));
-    	$task = $req->fetch();
-    	return $task;
+    	return $req->fetch();
 	}
 
-	public function addTask($name, $description){
-
-		$db = $this->dbConnect();
+	public function newArticle($name, $description){
+/* 		$db = $this->dbConnect();
 	    $req = $db->prepare('INSERT INTO `tache` (`name`, `description`) VALUES (:name, :description)');
 	    if (strlen($description) <= 1 OR strlen($name) <= 1) {
 	    	echo 'trop court';
@@ -51,48 +42,6 @@ class AdminManager extends Manager {
 		    	':name' => htmlspecialchars($name),
 		    	':description' => htmlspecialchars($description)
 	    	));
-		}
-	}
-
-	public function getTaskComment($id){
-
-		$db = $this->dbConnect();
-	    $req = $db->prepare('SELECT * FROM tache_comment WHERE task_id = :task_id');
-	    $req->execute(array(
-	    	':task_id' => $id
-    	));
-
-	    return $req;
-
-	}
-
-	public function newTaskComment($id, $text){
-
-		$db = $this->dbConnect();
-	    $req = $db->prepare('INSERT INTO `tache_comment` (`task_id`, `text`) VALUES (:task_id, :comment)');
-	    if (strlen($text) <= 1) {
-	    	echo 'trop court';
-	    } else {
-		    $req->execute(array(
-		    	':task_id' => $id,
-		    	':comment' => htmlspecialchars($text)
-	    	));
-		}
-		
-	}
-
-	public function setTaskProgress($id, $value){
-
-		$progress = intval($value);
-
-		if ($progress > 0 || $progress < 100) {
-			$db = $this->dbConnect();
-		    $req = $db->prepare('UPDATE `tache` SET `progression` = :progress WHERE (`id` = :id)');
-		    $req->execute(array(
-		    	':id' => $id,
-		    	':progress' => $progress
-	    	));
-		}
-		
+		} */
 	}
 }
