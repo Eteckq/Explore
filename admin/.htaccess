@@ -4,4 +4,4 @@ Options +FollowSymlinks
 RewriteEngine On
 
 # Réécriture des actions 
-RewriteRule ^([a-z0-9\-]+)$ /index.php?action=$1 [L]
+RewriteRule ^([a-z0-9\-]+)$ /admin/index.php?action=$1 [L]
