@@ -8,10 +8,12 @@
 	src: url("/include/fonts/LeagueGothic-Regular.otf");
 }
 
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
 /* HEADER */
 
 header {
-	height: 500px;
+	height: 320px;
 	background-color: rgba(240, 240, 234, 0.6);
 	margin: auto;
 }
@@ -31,7 +33,27 @@ header .logo img {
 
 /* Nav bar */
 
+nav {
+	font-family: 'Quattrocento Sans', Helmet, Freesans, Tahoma, Geneva, sans-serif;
+	width: 25%;
+	margin: auto;
+}
 
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+nav ul a {
+	text-decoration: none;
+	color: rgb(37, 37, 37);
+}
+
+nav ul a:hover {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
 
 /* BODY */
 body {

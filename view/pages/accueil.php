@@ -7,9 +7,8 @@
 </div>
 
 <article class="Présentation">
-    <h1 class="display-4">Explore et Vous </h1>
-    <p class="lead">L'entreprise xplore
-        blblblblblbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.</p>
+    <h1 class="display-4">Explore et Vous</h1>
+    <p class="lead">L'entreprise Explore</p>
     <hr class="my-4">
 </article>
 
