@@ -14,6 +14,6 @@ $guestController = new DefaultGuestController();
 
 switch ($action) {
     case "articles": $guestController->articles(); break;
-    default: require('view/pages/accueil.php'); break;
+    default: $guestController->accueil(); break;
 }
 

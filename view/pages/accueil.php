@@ -2,7 +2,7 @@
 <?php ob_start(); ?>
 
 <div class="accueil-img">
-    <img src="https://fakeimg.pl/1920x1080/" alt="" height="800" width="100%"></img>
+    <img src="/include/images/background.jpg" alt="" height="200%" width="100%"></img>
     <h1 class="title"> Ne jamais cesser d'explorer </h1>
 </div>
 
@@ -14,35 +14,36 @@
 
 <div class="prestations">
 
-    <section class="">
-        <div class="">
+    <?php 
+    $i = 0;
+    
+    foreach ($prestations as $prestation) { 
+    $i++;
+    ?>
+    <section>
+        <?php if($i%2 == 0){ ?>
+
+        <div>
             <img src="https://img.icons8.com/metro/100/000000/user-group-man-man.png" />
         </div>
         <div class="text-presta">
-            <h2>Community Management </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <h2><?= $prestation["title"] ?></h2>
+            <p><?= $prestation["description"] ?></p>
         </div>
-    </section>
-
-
-
-    <section class="">
+        <?php } else { ?>
         <div class="text-presta">
-            <h2>Formations</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <h2><?= $prestation["title"] ?></h2>
+            <p><?= $prestation["description"] ?></p>
         </div>
-        <div class="">
-            <img src="https://img.icons8.com/ios-glyphs/100/000000/businessman.png" />
+        <div>
+            <img src="https://img.icons8.com/metro/100/000000/user-group-man-man.png" />
         </div>
+        <?php } ?>
     </section>
+    <?php } ?>
+
+
+
 
 </div>
 
@@ -79,6 +80,11 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<script>
+$('.accueil-img').parallax({imageSrc: '/include/images/background.jpg'});
+
+</script>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php'); ?>

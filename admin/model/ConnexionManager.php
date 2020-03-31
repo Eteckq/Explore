@@ -11,7 +11,7 @@ class ConnexionManager extends Manager {
             return false;
         } else if($user['password'] == $password){
             $_SESSION['admin'] = true;
-            $_SESSION['user_id'] = $user["id"];
+            $_SESSION['user_id'] = $user['id'];
             if($stayConnected){
                 //Extension de la durée de la session
                 $params = session_get_cookie_params();

@@ -2,6 +2,6 @@
 Options +FollowSymlinks 
 # Activation du mod rewrite d'Apache 
 RewriteEngine On
-
-# Réécriture des actions 
-RewriteRule ^([a-z0-9\-]+)$ /admin/index.php?action=$1 [L]
+RewriteRule ^([a-z\-]+)/([a-z\-]+)-([0-9]+)$ /admin/index.php?page=$1&action=$2&id=$3
+RewriteRule ^([a-z\-]+)/([a-z\-]+)$ /admin/index.php?page=$1&action=$2
+RewriteRule ^([a-z\-]+)$ /admin/index.php?page=$1 [L]

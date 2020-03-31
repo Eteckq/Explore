@@ -19,9 +19,9 @@
         <a href="#">Contact</a>
         <a href="#">Mentions légales</a>
         <span class="social-links">
-            <a href="#"><img src="https://img.icons8.com/metro/30/000000/instagram-new.png" alt="IG"></a>
-            <a href="#"><img src="https://img.icons8.com/ios/30/000000/facebook-circled.png" alt="FB"></a>
-            <a href="#"><img src="https://img.icons8.com/android/30/000000/twitter.png" alt="TW"></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </span>
     </div>
 </div>

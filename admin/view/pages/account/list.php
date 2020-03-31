@@ -1,25 +1,25 @@
-<?php $title = 'Liste des joueurs'; ?>
+<?php $title = 'Liste des admins'; ?>
 <?php ob_start(); ?>
 
 
 <table class="table table-dark table-striped">
   <thead>
     <tr>
-      <th>Id</th>
       <th>Pseudo</th>
       <th>Mail</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
 
 
 
-    <?php while ($admin = $adminsReq->fetch()) { ?>
+    <?php foreach ($admins as $admin) { ?>
 
     <tr>
-      <td><a href="index.php?action=player&id=<?= $admin['id'] ?>"><?= $admin['id'] ?></a></td>
-      <td><?= $admin['pseudo'] ?></td>
-      <td><?= $admin['mail'] ?></td>
+      <td><?= $admin->pseudo ?></td>
+      <td><?= $admin->mail ?></td>
+      <td><a href="/admin/account/view-<?= $admin->id ?>">Modifier</a></td>
     </tr>
 
     <?php } ?>

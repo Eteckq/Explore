@@ -9,6 +9,11 @@ class DefaultGuestController {
 		$this->guestManager = new GuestManager();
 	}
 
+	function accueil(){
+		$prestations = $this->guestManager->getPrestations();
+		require('view/pages/accueil.php');
+	}
+
 	function articles(){
 		require('view/pages/articles.php');
 	}

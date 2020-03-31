@@ -1,21 +1,54 @@
 <?php
 session_start();
 
-require('controller/DefaultAdminController.php');
 require('controller/ConnexionController.php');
 
-$action = isset($_GET['action']) ? $_GET['action'] : "accueil";
+require('controller/AccountController.php');
+require('controller/PrestationController.php');
+
+var_dump($_GET);
+var_dump($_POST);
+
+$page = isset($_GET['page']) ? $_GET['page'] : "accueil";
+$action = isset($_GET['action']) ? $_GET['action'] : "list";
+$id = isset($_GET['id']) ? $_GET['id'] : "0";
 $admin = isset($_SESSION['admin']) ? $_SESSION['admin'] : false;
 
 
 if($admin){ //Si le user est un admin
-    $adminController = new DefaultAdminController();
+    $accountController = new AccountController();
+    $prestationController = new PrestationController();
 
-    switch ($action) {
-        case "admins": $adminController->admins(); break;
-        case "articles": $adminController->articles(); break;
+    switch ($page) {
+        case "prestation":
+            switch ($action) {
+                case "view":
+                    $prestationController->getPrestation($id);
+                    break;
+                case "edit":
+                    $prestationController->editPrestation($_POST["id"],$_POST["title"],$_POST["description"]);
+                    break;
+                case "list": default:
+                    $prestationController->prestations();
+                    break;
+            }
+        break;
+        case "account":
+            switch ($action) {
+                case "view":
+                    $accountController->getAdmin($id);
+                    break;
+                case "edit":
+                    $accountController->editAdmin($_POST["id"],$_POST["pseudo"],$_POST["mail"],$_POST["password"]);
+                    break;
+                case "list": default:
+                    $accountController->admins();
+                    break;
+            }
+        break;
         default: require('view/pages/accueil.php'); break;
     }
+
 
 } else {
     if($action == "connect"){
