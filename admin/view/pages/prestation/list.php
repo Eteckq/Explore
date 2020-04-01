@@ -2,6 +2,7 @@
 <?php ob_start(); ?>
 
 <div class="row justify-content-center">
+
   <?php foreach ($prestations as $prestation) { ?>
 
   <div class="col-sm-6 col-lg-4">
@@ -18,8 +19,8 @@
         <a href="/admin/prestation/view-<?= $prestation->id ?>" class="btn btn-warning">Modifier</a>
       </div>
     </div>
-
   </div>
+
   <?php } ?>
 
   <div class="card" style="width: 18rem;">

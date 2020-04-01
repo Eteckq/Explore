@@ -1,6 +1,6 @@
 <?php
 if(!isset($_SESSION['admin'])){
-    header('Location: '.'index.php');
+    header('Location: index.php');
 }
 ?>
 
