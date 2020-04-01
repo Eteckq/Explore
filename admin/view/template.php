@@ -21,25 +21,20 @@ if(!isset($_SESSION['admin'])){
 </head>
 
 <body>
-    <div class="row text-center fill">
-        <!-- Partie gauche , "info"  -->
-        <div class="col-sm-2">
+    <div class="text-center">
+        <div class="navbar">
             <?php include('view/menu.php'); ?>
-            <a onClick="destroy()" href="/">DECONNEXION</a>
         </div>
-        <!-- Partie droite -->
-        <div class="col-sm-9 m-3">
+        <div class="body">
+            <div class="content">
             <?= $content ?>
+            </div>
         </div>
+            
+
     </div>
 </body>
 
 </html>
 
-<script>
 
-function destroy(){
-    document.cookie = "PHPSESSID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-}
-
-</script>

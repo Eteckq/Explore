@@ -5,7 +5,28 @@ body {
 	background-size: 100%; */
 }
 
+.navbar {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	width: 324px;
+	height: 100vh;
+	background-color: #f0f4f7;
+	border-right: 1px solid #c8d2dc;
+}
+
+.body {
+	margin-left: 324px;
+}
+
+.content {
+	padding: 50px;
+}
+
 footer {
   background-color: rgb(2, 2, 36);
 }
+
 
