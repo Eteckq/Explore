@@ -6,13 +6,13 @@
   <?php foreach ($prestations as $prestation) { ?>
 
   <div class="col-sm-6 col-lg-4">
-    <div class="card" style="max-width: 18rem;">
-      <div class="card-header bg-behance content-center" style="color:white">
+    <div class="card" style="max-width: 23rem;">
+      <div class="card-header bg-behance content-center pb-2 pt-2" style="color:white">
         <?= $prestation->title ?>
       </div>
       <div class="card-body row text-center">
         <div class="col">
-          <div class="small"><?= $prestation->description ?></div>
+          <?= $prestation->description ?>
         </div>
       </div>
       <div class="card-footer">
@@ -26,7 +26,7 @@
 
   <div class="col-sm-6 col-lg-4">
     <a href="/admin/prestation/view-0">
-      <div class="card" style="max-width: 18rem; background-color:#2eb85c;min-height:140.8px;">
+      <div class="card" style="max-width: 23rem; background-color:#39f;min-height:160px;">
         <div class="card-body row text-center content-center">
           <i class="fas fa-plus" style="font-size: 5em; color:white"></i>
         </div>

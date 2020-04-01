@@ -8,11 +8,9 @@
     <div class="">
         <a href="#">Prestations</a>
         <div class="submenu-presta">
-            <a href="#">Community Management</a>
-            <a href="#">Formations</a>
-            <a href="#">Photographie</a>
-            <a href="#">Evénements</a>
-            <a href="#">Mise en avant réseau Explore</a>
+        <?php foreach ($prestations as $prestation) { ?>
+            <a href="#"><?= $prestation->title ?></a>
+        <?php } ?>
         </div>
     </div>
     <div class="">

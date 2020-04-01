@@ -27,13 +27,13 @@
             <img src="https://img.icons8.com/metro/100/000000/user-group-man-man.png" />
         </div>
         <div class="text-presta">
-            <h2><?= $prestation["title"] ?></h2>
-            <p><?= $prestation["description"] ?></p>
+            <h2><?= $prestation->title ?></h2>
+            <p><?= $prestation->description ?></p>
         </div>
         <?php } else { ?>
         <div class="text-presta">
-            <h2><?= $prestation["title"] ?></h2>
-            <p><?= $prestation["description"] ?></p>
+            <h2><?= $prestation->title ?></h2>
+            <p><?= $prestation->description ?></p>
         </div>
         <div>
             <img src="https://img.icons8.com/metro/100/000000/user-group-man-man.png" />
