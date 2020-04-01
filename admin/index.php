@@ -6,8 +6,7 @@ require('controller/ConnexionController.php');
 require('controller/AccountController.php');
 require('controller/PrestationController.php');
 
-var_dump($_GET);
-var_dump($_POST);
+//var_dump($_POST);
 
 $page = isset($_GET['page']) ? $_GET['page'] : "accueil";
 $action = isset($_GET['action']) ? $_GET['action'] : "list";
@@ -51,9 +50,9 @@ if($admin){ //Si le user est un admin
 
 
 } else {
-    if($action == "connect"){
+    if($page == "connect"){
         $connexionController = new ConnexionController();
-        $connexionController->connect($_POST["login"],$_POST["pass"],isset($_POST["remember"])); 
+        $connexionController->connect($_POST["mail"],$_POST["password"],isset($_POST["remember"])); 
     } else {
         require('view/loginView.php');
     }

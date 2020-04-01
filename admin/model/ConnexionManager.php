@@ -4,10 +4,10 @@ require_once("model/Manager.php");
 class ConnexionManager extends Manager {
 
 
-	public function connect($pseudo, $password, $stayConnected): bool{
-        $user = $this->getUserFromPseudo($pseudo);
+	public function connect($mail, $password, $stayConnected): bool{
+        $user = $this->getUserFromMail($mail);
 
-        if($password == "" OR $pseudo == ""){
+        if($password == "" OR $mail == ""){
             return false;
         } else if($user['password'] == $password){
             $_SESSION['admin'] = true;

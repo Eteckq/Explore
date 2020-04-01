@@ -18,12 +18,12 @@ class Manager {
     	return $req->fetch();
 	}
 
-	public function getUserFromPseudo($pseudo){ //Transforme un pseudo (string) de user en son ID correspondant
+	public function getUserFromMail($mail){
 
 		$db = $this->dbConnect();
-	    $req = $db->prepare('SELECT * FROM accounts WHERE pseudo=?');
+	    $req = $db->prepare('SELECT * FROM accounts WHERE mail=?');
 	    $req->execute(array(
-    		$pseudo
+    		$mail
     	));
 		$user = $req->fetch();
 	    return $user;

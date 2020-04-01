@@ -8,8 +8,8 @@ class ConnexionController {
 		$this->connexionManager = new ConnexionManager();
 	}
 
-	function connect($pseudo, $password, $stayConnected){
-		$this->connexionManager->connect($pseudo, $password, $stayConnected);
+	function connect($mail, $password, $stayConnected){
+		$this->connexionManager->connect($mail, $password, $stayConnected);
 		header('Location: /admin');
 	}
 

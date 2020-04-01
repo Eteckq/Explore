@@ -31,7 +31,7 @@
 	<?= $content ?>
 	</div>
 
-	<footer>
+	<footer class="footer">
 		<?php require('view/footer.php'); ?>
 	</footer>
 

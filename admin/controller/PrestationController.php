@@ -11,6 +11,12 @@ class PrestationController {
 
 	function prestations(){
 		$prestations = $this->prestationManager->getPrestations();
+		foreach ($prestations as $prestation) {
+			if(strlen($prestation->description) > 30){
+				$prestation->description = substr($prestation->description, 0, 30);
+				$prestation->description .= "...";
+			}
+		}
 		require('view/pages/prestation/list.php');
 	}
 

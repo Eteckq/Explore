@@ -1,32 +1,40 @@
-<?php $title = 'Préstations'; ?>
+<?php $title = 'Prestations'; ?>
 <?php ob_start(); ?>
 
-<div class="container">
+<div class="row justify-content-center">
+  <?php foreach ($prestations as $prestation) { ?>
 
-<table class="table table-dark table-striped">
-  <thead>
-    <tr>
-      <th>Titre</th>
-      <th>Contenu</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card" style="max-width: 18rem;">
+      <div class="card-header bg-behance content-center" style="color:white">
+        <?= $prestation->title ?>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="small"><?= $prestation->description ?></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="/admin/prestation/view-<?= $prestation->id ?>" class="btn btn-warning">Modifier</a>
+      </div>
+    </div>
 
-    <?php foreach ($prestations as $prestation) { ?>
+  </div>
+  <?php } ?>
 
-    <tr>
-      <td><?= $prestation->title ?></td>
-      <td><?= $prestation->description ?></td>
-      <td><a href="/admin/prestation/view-<?= $prestation->id ?>">Modifier</a></td>
-    </tr>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <a href="/admin/prestation/view-0" class="btn btn-success">Nouvelle</a>
+    </div>
+  </div>
 
-    <?php } ?>
+</div>
 
-  </tbody>
-</table>
+<div class="row">
 
-<a href="/admin/prestation/view-0">Nouvelle</a>
+</div>
+
+
 
 
 <?php $content = ob_get_clean(); ?>
