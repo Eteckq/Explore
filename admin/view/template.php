@@ -25,7 +25,7 @@ if(!isset($_SESSION['admin'])){
         <!-- Partie gauche , "info"  -->
         <div class="col-sm-2">
             <?php include('view/menu.php'); ?>
-            <a onClick="destroy()" href="/">DECO</a>
+            <a onClick="destroy()" href="/">DECONNEXION</a>
         </div>
         <!-- Partie droite -->
         <div class="col-sm-9 m-3">
