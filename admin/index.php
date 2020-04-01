@@ -27,6 +27,9 @@ if($admin){ //Si le user est un admin
                 case "edit":
                     $prestationController->editPrestation($_POST["id"],$_POST["title"],$_POST["description"]);
                     break;
+                case "delete":
+                    //$prestationController->prestations();
+                    break;
                 case "list": default:
                     $prestationController->prestations();
                     break;
@@ -39,6 +42,9 @@ if($admin){ //Si le user est un admin
                     break;
                 case "edit":
                     $accountController->editAdmin($_POST["id"],$_POST["pseudo"],$_POST["mail"],$_POST["password"]);
+                    break;
+                case "delete":
+                    $accountController->deleteAdmin($id);
                     break;
                 case "list": default:
                     $accountController->admins();

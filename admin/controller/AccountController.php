@@ -32,4 +32,9 @@ class AccountController {
 		}
 		header('Location: /admin/account/list');
 	}
+
+	function deleteAdmin($id){
+		$this->accountManager->deleteAccount($id);
+		header('Location: /admin/account/list');
+	}
 }

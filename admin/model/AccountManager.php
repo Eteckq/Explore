@@ -65,4 +65,13 @@ class AccountManager extends Manager {
 			':password' => $password
 		));
 	}
+
+	public function deleteAccount($id){
+		$db = $this->dbConnect();
+		$req = $db->prepare('DELETE FROM `accounts` WHERE `id` = :id');
+		$req->execute(array(
+			':id' => $id,
+		));
+	}
 }
+
