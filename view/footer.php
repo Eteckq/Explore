@@ -8,9 +8,9 @@
     <div class="">
         <a href="#">Prestations</a>
         <div class="submenu-presta">
-        <?php foreach ($prestations as $prestation) { ?>
-            <a href="#"><?= $prestation->title ?></a>
-        <?php } ?>
+            <?php foreach ($prestations as $prestation) { ?>
+            <a href="/prestation-<?= $prestation->id ?>"><?= $prestation->title ?></a>
+            <?php } ?>
         </div>
     </div>
     <div class="">

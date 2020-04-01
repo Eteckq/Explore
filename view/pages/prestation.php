@@ -1,10 +1,12 @@
 <?php $title = 'Prestations'; ?>
 <?php ob_start(); ?>
 
-<!-- met des $ devant les variables qui vont changer -->
-<h1>$NOM DE LA PRESTATION</h1>
+<!-- On aura peut être une image dans le future, à prévoir ? -->
+<h1><?= $prestation->title ?></h1>
 
-<p>$DESCRIPTION</p>
+<p><?= $prestation->description ?></p>
+
+
 
 
 <?php $content = ob_get_clean(); ?>

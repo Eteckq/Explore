@@ -14,7 +14,12 @@ class DefaultGuestController {
 		require('view/pages/accueil.php');
 	}
 
-	function articles(){
-		require('view/pages/articles.php');
+	function prestation($id){
+		$prestations = $this->guestManager->getPrestations();
+		
+		$prestation = $this->guestManager->getPrestation($id);
+		require('view/pages/prestation.php');
 	}
+
+
 }
