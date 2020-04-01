@@ -16,24 +16,36 @@
         </div>
       </div>
       <div class="card-footer">
-        <a href="/admin/prestation/view-<?= $prestation->id ?>" class="btn btn-warning">Modifier</a>
+        <a href="/admin/prestation/view-<?= $prestation->id ?>" type="button" class="btn btn-warning text-white">Modifier <i class="fas fa-pen"></i></a>
+        <a onclick="deletePrestation(<?= $prestation->id ?>)" type="button" class="btn btn-danger text-white"><i class="fas fa-trash"></i></a>
       </div>
     </div>
   </div>
 
   <?php } ?>
 
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <a href="/admin/prestation/view-0" class="btn btn-success">Nouvelle</a>
-    </div>
+  <div class="col-sm-6 col-lg-4">
+    <a href="/admin/prestation/view-0">
+      <div class="card" style="max-width: 18rem; background-color:#2eb85c;min-height:140.8px;">
+        <div class="card-body row text-center content-center">
+          <i class="fas fa-plus" style="font-size: 5em; color:white"></i>
+        </div>
+      </div>
+    </a>
   </div>
 
-</div>
-
-<div class="row">
 
 </div>
+
+<script>
+
+function deletePrestation(id){
+  if(confirm("Voulez vous vraiment supprimer cette prestation ?")){
+    document.location = "/admin/prestation/delete-" + id;
+  }
+}
+
+</script>
 
 
 

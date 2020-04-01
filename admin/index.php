@@ -28,7 +28,7 @@ if($admin){ //Si le user est un admin
                     $prestationController->editPrestation($_POST["id"],$_POST["title"],$_POST["description"]);
                     break;
                 case "delete":
-                    //$prestationController->prestations();
+                    $prestationController->deletePrestation($id);
                     break;
                 case "list": default:
                     $prestationController->prestations();

@@ -61,4 +61,12 @@ class PrestationManager extends Manager {
 			':description' => $description
 		));
 	}
+
+	public function deletePrestation($id){
+		$db = $this->dbConnect();
+		$req = $db->prepare('DELETE FROM `prestations` WHERE `id` = :id');
+		$req->execute(array(
+			':id' => $id,
+		));
+	}
 }

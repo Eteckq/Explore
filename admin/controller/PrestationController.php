@@ -38,4 +38,9 @@ class PrestationController {
 		}
 		header('Location: /admin/prestation/list');
 	}
+
+	function deletePrestation($id){
+		$this->prestationManager->deletePrestation($id);
+		header('Location: /admin/prestation/list');
+	}
 }
