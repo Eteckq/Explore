@@ -10,11 +10,37 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-
 	width: 324px;
 	height: 100vh;
 	background-color: #f0f4f7;
 	border-right: 1px solid #c8d2dc;
+	overflow-y: scroll;
+	flex-wrap: nowrap;
+
+}
+
+.navbar .nav-item {
+	padding: 20px 0;
+	margin: 5px 0;
+	color: rgb(4, 0, 26);
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+
+}
+
+.navbar .nav-item:hover {
+	background-color: rgb(157, 209, 255);
+}
+
+.navbar .nav-item span {
+	font-size: 1.5em;
+}
+
+.navbar .nav-item .icon {
+	font-size: 3em;
 }
 
 .body {
