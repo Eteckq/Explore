@@ -27,7 +27,7 @@
   </div>
 
   <input hidden type="number" name="id" id="id" value="<?= $admin->id ?>">
-  <button type="submit" class="btn btn-primary mb-2">Sauvegarder</button>
+  <button type="submit" class="btn btn-primary">Sauvegarder</button>
 </form>
 
 
