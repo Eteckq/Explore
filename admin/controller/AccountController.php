@@ -20,7 +20,6 @@ class AccountController {
 		} else {
 			$admin = $this->accountManager->getEmptyAccount();
 		}
-
 		require('view/pages/account/edit.php');
 	}
 

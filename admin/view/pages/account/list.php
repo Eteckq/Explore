@@ -1,4 +1,4 @@
-<?php $title = 'Liste des admins'; ?>
+<?php $title = 'Liste des admins'; $menu = 'accounts'; ?>
 <?php ob_start(); ?>
 
 <table class="table table-dark table-striped">

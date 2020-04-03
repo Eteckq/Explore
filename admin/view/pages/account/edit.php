@@ -1,4 +1,4 @@
-<?php $title = 'Edition'; ?>
+<?php $title = 'Edition'; $menu = 'accounts'; ?>
 <?php ob_start(); ?>
 
 <form action="/admin/account/edit" method="post">

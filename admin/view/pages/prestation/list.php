@@ -1,4 +1,4 @@
-<?php $title = 'Prestations'; ?>
+<?php $title = 'Prestations'; $menu = 'prestations'; ?>
 <?php ob_start(); ?>
 
 <div class="row justify-content-center">

@@ -1,17 +1,23 @@
+<?php
+if(!isset($menu)){
+  $menu = "";
+}
+?>
+
+<a class="nav-header" href="/admin">
+    <img src="/include/images/logo.svg" alt="Explore logo" width="150px" height="150px" />
+</a>
+
 <div class="side-navbar">
 
-  <a class="nav-header" href="/admin">
-    <img src="/include/images/logo.svg" alt="Explore logo" width="150px" height="150px" />
-  </a>
-
-  <a class="nav-item" href="/admin/account">
+  <a class="nav-item <?= $menu == 'accounts' ? "selected" : "" ?>" href="/admin/account">
     <div class="icon">
       <i class="fas fa-user-cog"></i>
     </div>
     <span>Liste des admins</span>
   </a>
 
-  <a class="nav-item" href="/admin/prestation">
+  <a class="nav-item <?= $menu == 'prestations' ? "selected" : "" ?>" href="/admin/prestation">
     <div class="icon">
       <i class="fas fa-hands-helping"></i>
     </div>
