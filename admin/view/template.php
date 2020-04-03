@@ -30,8 +30,6 @@ if(!isset($_SESSION['admin'])){
             <?= $content ?>
             </div>
         </div>
-            
-
     </div>
 </body>
 
