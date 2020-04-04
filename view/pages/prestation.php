@@ -2,9 +2,9 @@
 <?php ob_start(); ?>
 
 <!-- On aura peut être une image dans le future, à prévoir ? -->
-<h1><?= $prestation->title ?></h1>
+<h1><?= $params["prestation"]->title ?></h1>
 
-<p><?= $prestation->description ?></p>
+<p><?= $params["prestation"]->description ?></p>
 
 
 

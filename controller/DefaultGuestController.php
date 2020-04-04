@@ -9,16 +9,22 @@ class DefaultGuestController {
 		$this->guestManager = new GuestManager();
 	}
 
-	function accueil(){
+	private function loadPage($pageName, $params = null){
 		$prestations = $this->guestManager->getPrestations();
+		require('view/pages/'.$pageName.'.php');
+	}
+
+	function accueil(){
 		require('view/pages/accueil.php');
 	}
 
 	function prestation($id){
-		$prestations = $this->guestManager->getPrestations();
-		
 		$prestation = $this->guestManager->getPrestation($id);
-		require('view/pages/prestation.php');
+		$this->loadPage("prestation", array("prestation" => $prestation));
+	}
+
+	function contact(){
+		$this->loadPage("contact");
 	}
 
 

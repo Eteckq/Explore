@@ -10,6 +10,7 @@ $guestController = new DefaultGuestController();
 
 switch ($action) {
     case "prestation": $guestController->prestation($id); break;
+    case "contact": $guestController->contact(); break;
     default: $guestController->accueil(); break;
 }
 
