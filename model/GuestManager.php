@@ -14,6 +14,7 @@ class GuestManager extends Manager {
 			$prestation = new Prestation($prestationReq["id"]);
 			$prestation->title = $prestationReq["title"];
 			$prestation->description = $prestationReq["description"];
+			$prestation->image = $prestationReq["image"];
 
 			$prestations[] = $prestation;
 		}
@@ -31,6 +32,7 @@ class GuestManager extends Manager {
 		$prestation = new Prestation($prestationReq["id"]);
 		$prestation->title = $prestationReq["title"];
 		$prestation->description = $prestationReq["description"];
+		$prestation->image = $prestationReq["image"];
 
     	return $prestation;
 	}

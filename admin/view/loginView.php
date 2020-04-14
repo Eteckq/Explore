@@ -54,6 +54,11 @@
 											<button class="btn btn-link px-0" type="button"><a href="/">Retour</a></button>
 										</div>
 									</div>
+									<div class="row">
+									<?php if(isset($_GET["error"])){ ?>
+										<p>ERREUR</p>
+									<?php } ?>
+									</div>
 								</form>
 							</div>
 						</div>

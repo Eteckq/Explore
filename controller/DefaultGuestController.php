@@ -15,7 +15,7 @@ class DefaultGuestController {
 	}
 
 	function accueil(){
-		require('view/pages/accueil.php');
+		$this->loadPage("accueil");
 	}
 
 	function prestation($id){

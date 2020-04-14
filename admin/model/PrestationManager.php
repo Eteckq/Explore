@@ -14,6 +14,7 @@ class PrestationManager extends Manager {
 			$prestation = new Prestation($prestationReq["id"]);
 			$prestation->title = $prestationReq["title"];
 			$prestation->description = $prestationReq["description"];
+			$prestation->image = $prestationReq["image"];
 
 			$prestations[] = $prestation;
 		}
@@ -31,6 +32,7 @@ class PrestationManager extends Manager {
 		$prestation = new Prestation($prestationReq["id"]);
 		$prestation->title = $prestationReq["title"];
 		$prestation->description = $prestationReq["description"];
+		$prestation->image = $prestationReq["image"];
 
     	return $prestation;
 	}
@@ -39,26 +41,28 @@ class PrestationManager extends Manager {
 		return new Prestation(0);
 	}
 
-	public function createPrestation($title, $description){
+	public function createPrestation($title, $description, $image){
 		$db = $this->dbConnect();
-	    $req = $db->prepare('INSERT INTO `prestations` (`title`, `description`) VALUES (:title, :description)');
+	    $req = $db->prepare('INSERT INTO `prestations` (`title`, `description`, `image`) VALUES (:title, :description, :image)');
 	    if (strlen($description) <= 1 || strlen($title) <= 1) {
 	    	//exception
 	    } else {
 		    $req->execute(array(
 		    	':title' => htmlspecialchars($title),
-		    	':description' => htmlspecialchars($description)
+		    	':description' => htmlspecialchars($description),
+		    	':image' => htmlspecialchars($image)
 			));
 		}
 	}
 
-	public function editPrestation($id, $title, $description){
+	public function editPrestation($id, $title, $description, $image){
 		$db = $this->dbConnect();
-		$req = $db->prepare('UPDATE `prestations` SET title = :title, description = :description WHERE (`id` = :id)');
+		$req = $db->prepare('UPDATE `prestations` SET title = :title, description = :description, image = :image WHERE (`id` = :id)');
 		$req->execute(array(
 			':id' => $id,
 			':title' => $title,
-			':description' => $description
+			':description' => $description,
+			':image' => htmlspecialchars($image)
 		));
 	}
 

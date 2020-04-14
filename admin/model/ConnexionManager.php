@@ -3,13 +3,29 @@ require_once("model/Manager.php");
 
 class ConnexionManager extends Manager {
 
+    public function getAccountCount(){
+		$db = $this->dbConnect();
+	    $req = $db->prepare('SELECT * FROM accounts');
+	    $req->execute();
+		return $req->rowCount();
+    }
+    
+    public function createDefaultAdmin(){
+		$db = $this->dbConnect();
+	    $req = $db->prepare('INSERT INTO `accounts` (`pseudo`, `mail`,`password`) VALUES (:pseudo, :mail, :password)');
+        $req->execute(array(
+            ':pseudo' => "Admin",
+            ':mail' => "To be changed !",
+            ':password' => password_hash("root", PASSWORD_DEFAULT)
+        ));
+	}
 
 	public function connect($mail, $password, $stayConnected): bool{
         $user = $this->getUserFromMail($mail);
 
         if($password == "" OR $mail == ""){
             return false;
-        } else if($user['password'] == $password){
+        } else if(password_verify($password, $user['password'])){
             $_SESSION['admin'] = true;
             $_SESSION['user_id'] = $user['id'];
             if($stayConnected){

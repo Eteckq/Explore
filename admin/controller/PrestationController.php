@@ -30,11 +30,11 @@ class PrestationController {
 		require('view/pages/prestation/edit.php');
 	}
 
-	function editPrestation($id, $title, $description){
+	function editPrestation($id, $title, $description, $image){
 		if($id != 0){
-			$this->prestationManager->editPrestation($id, $title, $description);
+			$this->prestationManager->editPrestation($id, $title, $description, $image);
 		} else {
-			$this->prestationManager->createPrestation($title, $description);
+			$this->prestationManager->createPrestation($title, $description, $image);
 		}
 		header('Location: /admin/prestation/list');
 	}

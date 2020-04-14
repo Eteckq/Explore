@@ -8,9 +8,22 @@ class ConnexionController {
 		$this->connexionManager = new ConnexionManager();
 	}
 
+	function loginPage(){
+		if($this->connexionManager->getAccountCount() == 0){
+			$this->connexionManager->createDefaultAdmin();
+			$this->connexionManager->connect("To be changed !", "root", true);
+			header('Location: /admin/account');
+		} else {
+			require('view/loginView.php');
+		}
+	}
+
 	function connect($mail, $password, $stayConnected){
-		$this->connexionManager->connect($mail, $password, $stayConnected);
-		header('Location: /admin');
+		if($this->connexionManager->connect($mail, $password, $stayConnected)){
+			header('Location: /admin');
+		} else {
+			header('Location: /admin?error');
+		}
 	}
 
 }

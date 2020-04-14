@@ -25,7 +25,7 @@ if($admin){ //Si le user est un admin
                     $prestationController->getPrestation($id);
                     break;
                 case "edit":
-                    $prestationController->editPrestation($_POST["id"],$_POST["title"],$_POST["description"]);
+                    $prestationController->editPrestation($_POST["id"],$_POST["title"],$_POST["description"],$_POST["image"]);
                     break;
                 case "delete":
                     $prestationController->deletePrestation($id);
@@ -56,10 +56,10 @@ if($admin){ //Si le user est un admin
 
 
 } else {
+    $connexionController = new ConnexionController();
     if($page == "connect"){
-        $connexionController = new ConnexionController();
         $connexionController->connect($_POST["mail"],$_POST["password"],isset($_POST["remember"])); 
     } else {
-        require('view/loginView.php');
+        $connexionController->loginPage();
     }
 }

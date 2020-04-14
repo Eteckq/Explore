@@ -23,8 +23,8 @@
     <section>
         <?php if($i%2 == 0){ ?>
 
-        <div>
-            <img src="https://img.icons8.com/metro/100/000000/user-group-man-man.png" />
+        <div class="image-presta">
+            <i class="fas fa-<?= $prestation->image ?>"></i>
         </div>
         <div class="text-presta">
             <h2><?= $prestation->title ?></h2>
@@ -35,8 +35,8 @@
             <h2><?= $prestation->title ?></h2>
             <p><?= $prestation->description ?></p>
         </div>
-        <div>
-            <img src="https://img.icons8.com/metro/100/000000/user-group-man-man.png" />
+        <div class="image-presta">
+            <i class="fas fa-<?= $prestation->image ?>"></i>
         </div>
         <?php } ?>
     </section>

@@ -42,6 +42,7 @@ class AccountManager extends Manager {
 	}
 
 	public function createAccount($pseudo, $mail, $password){
+		$hash = password_hash($password, PASSWORD_DEFAULT);
 		$db = $this->dbConnect();
 	    $req = $db->prepare('INSERT INTO `accounts` (`pseudo`, `mail`,`password`) VALUES (:pseudo, :mail, :password)');
 	    if (strlen($password) <= 1 || strlen($pseudo) <= 1) {
@@ -50,19 +51,20 @@ class AccountManager extends Manager {
 		    $req->execute(array(
 		    	':pseudo' => htmlspecialchars($pseudo),
 		    	':mail' => htmlspecialchars($mail),
-		    	':password' => htmlspecialchars($password)
+		    	':password' => $hash
 			));
 		}
 	}
 
 	public function editAccount($id, $pseudo, $mail, $password){
+		$hash = password_hash($password, PASSWORD_DEFAULT);
 		$db = $this->dbConnect();
 		$req = $db->prepare('UPDATE `accounts` SET pseudo = :pseudo, mail = :mail, password = :password WHERE (`id` = :id)');
 		$req->execute(array(
 			':id' => $id,
-			':pseudo' => $pseudo,
-			':mail' => $mail,
-			':password' => $password
+			':pseudo' => htmlspecialchars($pseudo),
+			':mail' => htmlspecialchars($mail),
+			':password' => $hash
 		));
 	}
 

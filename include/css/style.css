@@ -1,296 +1,302 @@
 @font-face {
-	font-family: "Edo";
-	src: url("/include/fonts/edo.ttf");
+  font-family: "Edo";
+  src: url("/include/fonts/edo.ttf");
 }
 
 @font-face {
-	font-family: "League Gothic";
-	src: url("/include/fonts/LeagueGothic-Regular.otf");
+  font-family: "League Gothic";
+  src: url("/include/fonts/LeagueGothic-Regular.otf");
 }
 
 @font-face {
-	font-family: "League Gothic";
-	src: url("/include/fonts/LeagueGothic-Regular.otf");
+  font-family: "League Gothic";
+  src: url("/include/fonts/LeagueGothic-Regular.otf");
 }
 
 @font-face {
-	font-family: "Quattrocento Sans";
-	src: url("https://fonts.gstatic.com/s/quattrocentosans/v12/va9c4lja2NVIDdIAAoMR5MfuElaRB0zHt0_uHA.woff2");
+  font-family: "Quattrocento Sans";
+  src: url("https://fonts.gstatic.com/s/quattrocentosans/v12/va9c4lja2NVIDdIAAoMR5MfuElaRB0zHt0_uHA.woff2");
 }
 
 
 /* HEADER */
 
 header {
-	height: 320px;
-	background-color: rgba(240, 240, 234, 0.6);
-	margin: auto;
+  height: 320px;
+  background-color: rgba(240, 240, 234, 0.6);
+  margin: auto;
 }
 
 header .content {
-	margin: auto;
+  margin: auto;
 }
 
 header .logo {
-	padding: 10px;
+  padding: 10px;
 }
 
 header .logo img {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Nav bar */
 
 nav {
-	font-family: 'Quattrocento Sans', Helmet, Freesans, Tahoma, Geneva, sans-serif;
-	width: 25%;
-	margin: auto;
+  font-family: 'Quattrocento Sans', Helmet, Freesans, Tahoma, Geneva, sans-serif;
+  width: 25%;
+  margin: auto;
 }
 
 nav ul {
-	list-style: none;
-	display: flex;
-	justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 nav ul a {
-	text-decoration: none;
-	color: rgb(37, 37, 37);
-	transition: 500ms;
+  text-decoration: none;
+  color: rgb(37, 37, 37);
+  transition: 500ms;
 }
 
 nav ul a:hover {
-	text-decoration: none;
-	color: rgb(78, 78, 78);
+  text-decoration: none;
+  color: rgb(78, 78, 78);
 }
 
 /* BODY */
 body {
-	line-height: 1;
-	background-color: #f9f9f9;
-	font-size: 1.2rem;
+  line-height: 1;
+  background-color: #f9f9f9;
+  font-size: 1.2rem;
 }
 
 .content {
-	margin: auto;
+  margin: auto;
 }
 
 /* ACCUEIL */
 
 .accueil-img {
-	position: relative;
+  position: relative;
 }
 
 .accueil-img .title {
-	position: absolute;
-	margin: auto;
-	left: 0;
-	right: 0;
-	top: 250px;
-	text-shadow: rgb(54, 54, 54) 1px 3px 1px;
-	color: white;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 250px;
+  text-shadow: rgb(54, 54, 54) 1px 3px 1px;
+  color: white;
 }
 
 /* prestations */
 
 .prestations {
-	width: 80%;
-	margin: auto;
+  width: 80%;
+  margin: auto;
 }
 
 .prestations section {
-	background-color: #F2F2F0;
-	width: 100%;
-	display: flex;
-	margin: 2.5em 0em;
-	padding: 2.5em 0em;
-	justify-content: space-between;
+  background-color: #F2F2F0;
+  width: 100%;
+  display: flex;
+  margin: 2.5em 0em;
+  padding: 2.5em 0em;
+  justify-content: space-between;
 }
 
 section div {
-	margin: auto;
+  margin: auto;
+}
+
+.image-presta {
+  font-size: 5em;
 }
 
 .text-presta {
-	width: 70%;
-	text-align: justify;
+  width: 70%;
+  text-align: justify;
 }
 
 .carroussel {
-	background-color: inherit;
+  background-color: inherit;
 }
 
 /* FOOTER */
 
-.site-footer
-{
-  background-color:#26272b;
-  padding:45px 0 20px;
-  font-size:15px;
-  line-height:24px;
-  color:#737373;
+.site-footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
 }
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
+
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5
 }
-.site-footer hr.small
-{
-  margin:20px 0
+
+.site-footer hr.small {
+  margin: 20px 0
 }
-.site-footer h6
-{
-  color:#fff;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
+
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px
 }
-.site-footer a
-{
-  color:#737373;
+
+.site-footer a {
+  color: #737373;
 }
-.site-footer a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
+
+.site-footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
 }
-.footer-links
-{
-  padding-left:0;
-  list-style:none
+
+.footer-links {
+  padding-left: 0;
+  list-style: none
 }
-.footer-links li
-{
-  display:block
+
+.footer-links li {
+  display: block
 }
-.footer-links a
-{
-  color:#737373
+
+.footer-links a {
+  color: #737373
 }
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
-  color:#2d60c7;
-  text-decoration:none;
-  transition:all .2s linear;
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #2d60c7;
+  text-decoration: none;
+  transition: all .2s linear;
 }
-.footer-links.inline li
-{
-  display:inline-block
+
+.footer-links.inline li {
+  display: inline-block
 }
-.site-footer .social-icons
-{
-  text-align:right
+
+.site-footer .social-icons {
+  text-align: right
 }
-.site-footer .social-icons a
-{
-  width:40px;
-  height:40px;
-  line-height:40px;
-  margin-left:6px;
-  margin-right:0;
-  border-radius:100%;
-  background-color:#33353d
+
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d
 }
-.copyright-text
-{
-  margin:0
+
+.copyright-text {
+  margin: 0
 }
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
+
+@media (max-width:991px) {
+  .site-footer [class^=col-] {
+    margin-bottom: 30px
   }
 }
-@media (max-width:767px)
-{
-  .site-footer
-  {
-    padding-bottom:0
+
+@media (max-width:767px) {
+  .site-footer {
+    padding-bottom: 0
   }
-  .site-footer .copyright-text,.site-footer .social-icons
-  {
-    text-align:center
+
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center
   }
 }
-.social-icons
-{
-  padding-left:0;
-  margin-bottom:0;
-  list-style:none
+
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none
 }
-.social-icons li
-{
-  display:inline-block;
-  margin-bottom:4px
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px
 }
-.social-icons li.title
-{
-  margin-right:15px;
-  text-transform:uppercase;
-  color:#96a2b2;
-  font-weight:700;
-  font-size:13px
+
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px
 }
-.social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
-  font-size:16px;
-  display:inline-block;
-  line-height:44px;
-  width:44px;
-  height:44px;
-  text-align:center;
-  margin-right:8px;
-  border-radius:100%;
-  -webkit-transition:all .2s linear;
-  -o-transition:all .2s linear;
-  transition:all .2s linear
+
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear
 }
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
-{
-  color:#fff;
-  background-color:#29aafe
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe
 }
-.social-icons.size-sm a
-{
-  line-height:34px;
-  height:34px;
-  width:34px;
-  font-size:14px
+
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px
 }
-.social-icons a.facebook:hover
-{
-  background-color:#3b5998
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998
 }
-.social-icons a.twitter:hover
-{
-  background-color:#00aced
+
+.social-icons a.twitter:hover {
+  background-color: #00aced
 }
-.social-icons a.linkedin:hover
-{
-  background-color:#007bb6
+
+.social-icons a.linkedin:hover {
+  background-color: #007bb6
 }
-.social-icons a.dribbble:hover
-{
-  background-color:#ea4c89
+
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89
 }
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
+
+@media (max-width:767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600
   }
 }
 
 
 @media (max-width: 1100px) {
-	nav {
-		width: 75%;
-	}
+  nav {
+    width: 75%;
+  }
 }

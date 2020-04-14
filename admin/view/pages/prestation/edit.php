@@ -4,17 +4,26 @@
 
 <form action="/admin/prestation/edit" method="post">
   <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="titre">Titre</span>
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="titre">Titre</span>
+    </div>
+    <input type="text" class="form-control" name="title" id="title" aria-describedby="titre"
+      value="<?= $prestation->title ?>">
   </div>
-  <input type="text" class="form-control" name="title" id="title" aria-describedby="titre" value="<?= $prestation->title ?>">
-</div>
 
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text">Description</span>
     </div>
     <textarea class="form-control" name="description"><?= $prestation->description ?></textarea>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="image">Image</span>
+    </div>
+    <input type="text" class="form-control" name="image" id="image" aria-describedby="image"
+      value="<?= $prestation->image ?>">
   </div>
 
   <input hidden type="number" name="id" id="id" value="<?= $prestation->id ?>">
