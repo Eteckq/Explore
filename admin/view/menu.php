@@ -1,11 +1,11 @@
 <?php
-if(!isset($menu)){
+if (!isset($menu)) {
   $menu = "";
 }
 ?>
 
 <a class="nav-header" href="/admin">
-    <img src="/include/images/logo.svg" alt="Explore logo" width="150px" height="150px" />
+  <img src="/include/images/logo.svg" alt="Explore logo" width="150px" height="150px" />
 </a>
 
 <div class="side-navbar">
@@ -14,14 +14,21 @@ if(!isset($menu)){
     <div class="icon">
       <i class="fas fa-user-cog"></i>
     </div>
-    <span>Liste des admins</span>
+    <span>Admins</span>
   </a>
 
   <a class="nav-item <?= $menu == 'prestations' ? "selected" : "" ?>" href="/admin/prestation">
     <div class="icon">
       <i class="fas fa-hands-helping"></i>
     </div>
-    <span>Liste des prestations</span>
+    <span>Prestations</span>
+  </a>
+
+  <a class="nav-item <?= $menu == 'events' ? "selected" : "" ?>" href="/admin/event">
+    <div class="icon">
+      <i class="fas fa-hands-helping"></i>
+    </div>
+    <span>Evenements</span>
   </a>
 
   <a class='nav-item' onClick="destroy()" href="/">

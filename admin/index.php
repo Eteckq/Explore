@@ -5,6 +5,7 @@ require('controller/ConnexionController.php');
 
 require('controller/AccountController.php');
 require('controller/PrestationController.php');
+require('controller/EventController.php');
 
 //var_dump($_POST);
 
@@ -17,6 +18,7 @@ $admin = isset($_SESSION['admin']) ? $_SESSION['admin'] : false;
 if($admin){ //Si le user est un admin
     $accountController = new AccountController();
     $prestationController = new PrestationController();
+    $eventController = new EventController();
 
     switch ($page) {
         case "prestation":
@@ -51,6 +53,23 @@ if($admin){ //Si le user est un admin
                     break;
             }
         break;
+        case "event":
+            switch ($action) {
+                case "view":
+                    $eventController->getEvent($id);
+                    break;
+                case "edit":
+                    $eventController->editEvent($_POST["id"], $_POST["title"], $_POST["description"]);
+                    break;
+                case "delete":
+                    $eventController->deleteEvent($id);
+                    break;
+                case "list":
+                default:
+                    $eventController->events();
+                    break;
+            }
+            break;
         default: require('view/pages/accueil.php'); break;
     }
 
