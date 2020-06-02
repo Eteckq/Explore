@@ -6,6 +6,7 @@ class Evenement
 
     public $title;
     public $description;
+    public $date;
 
     public function __construct($id)
     {
@@ -13,5 +14,6 @@ class Evenement
 
         $this->title = "";
         $this->description = "";
+        $this->date = "";
     }
 }

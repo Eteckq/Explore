@@ -1,4 +1,5 @@
-<?php $title = 'Préstation'; $menu = 'events'; ?>
+<?php $title = 'Préstation';
+$menu = 'events'; ?>
 <?php ob_start(); ?>
 
 
@@ -7,8 +8,7 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="titre">Titre</span>
     </div>
-    <input type="text" class="form-control" name="title" id="title" aria-describedby="titre"
-      value="<?= $event->title ?>">
+    <input type="text" class="form-control" name="title" id="title" aria-describedby="titre" value="<?= $event->title ?>">
   </div>
 
   <div class="input-group mb-3">
@@ -16,6 +16,13 @@
       <span class="input-group-text">Description</span>
     </div>
     <textarea class="form-control" name="description"><?= $event->description ?></textarea>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Date</span>
+    </div>
+    <textarea class="form-control" name="date"><?= $event->date ?></textarea>
   </div>
 
   <input hidden type="number" name="id" id="id" value="<?= $event->id ?>">

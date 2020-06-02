@@ -15,6 +15,9 @@ $menu = 'events'; ?>
           <div class="col">
             <?= $event->description ?>
           </div>
+          <div class="col">
+            <?= $event->date ?>
+          </div>
         </div>
         <div class="card-footer">
           <a href="/admin/event/view-<?= $event->id ?>" type="button" class="btn btn-warning text-white">Modifier <i class="fas fa-pen"></i></a>

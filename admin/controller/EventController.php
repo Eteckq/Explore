@@ -24,11 +24,11 @@ class EventController {
 		require('view/pages/event/edit.php');
 	}
 
-	function editEvent($id, $title, $description){
+	function editEvent($id, $title, $description, $date){
 		if($id != 0){
-			$this->eventManager->editEvent($id, $title, $description);
+			$this->eventManager->editEvent($id, $title,$description, $date);
 		} else {
-			$this->eventManager->createEvent($title, $description);
+			$this->eventManager->createEvent($title,$description, $date);
 		}
 		header('Location: /admin/event/list');
 	}

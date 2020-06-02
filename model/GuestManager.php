@@ -32,6 +32,7 @@ class GuestManager extends Manager {
 			$event = new Evenement($eventReq["id"]);
 			$event->title = $eventReq["title"];
 			$event->description = $eventReq["description"];
+			$event->date = $eventReq["date"];
 
 			$events[] = $event;
 		}

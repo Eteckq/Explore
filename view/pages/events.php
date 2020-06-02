@@ -1,14 +1,15 @@
 <?php $title = 'Evenements'; ?>
 <?php ob_start(); ?>
 
-    <?php
-    foreach ($params["evenements"] as $evenement) {
-    ?>
+<?php
+foreach ($params["evenements"] as $evenement) {
+?>
     <section>
-            <div class="evenement">
-                <h2><?= $evenement->title ?></h2>
-                <p><?= $evenement->description ?></p>
-            </div>
+        <div class="evenement">
+            <h2><?= $evenement->title ?></h2>
+            <p><?= $evenement->description ?></p>
+            <p><?= $evenement->date ?></p>
+        </div>
     </section>
 <?php } ?>
 
