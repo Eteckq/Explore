@@ -6,6 +6,9 @@
     <a href="/contact">Contact</a>
   </li>
   <li>
+    <a href="/events">Evenements</a>
+  </li>
+  <li>
     <a href="/admin/login">Admin</a>
   </li>
 </ul>

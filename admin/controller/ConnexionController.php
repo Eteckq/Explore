@@ -22,7 +22,7 @@ class ConnexionController {
 		if($this->connexionManager->connect($mail, $password, $stayConnected)){
 			header('Location: /admin');
 		} else {
-			header('Location: /admin?error');
+			header('Location: /admin/login?error');
 		}
 	}
 

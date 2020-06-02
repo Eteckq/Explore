@@ -2,6 +2,7 @@
 
 require_once("model/Manager.php");
 require_once("model/objects/Prestation.php");
+require_once("model/objects/Evenement.php");
 
 class GuestManager extends Manager {
 
@@ -19,6 +20,22 @@ class GuestManager extends Manager {
 			$prestations[] = $prestation;
 		}
 		return $prestations;
+	}
+
+	function getEvents()
+	{
+		$events = array();
+
+		$db = $this->dbConnect();
+		$eventsReq = $db->query('SELECT * FROM events');
+		while ($eventReq = $eventsReq->fetch()) {
+			$event = new Evenement($eventReq["id"]);
+			$event->title = $eventReq["title"];
+			$event->description = $eventReq["description"];
+
+			$events[] = $event;
+		}
+		return $events;
 	}
 	
 	function getPrestation($id){

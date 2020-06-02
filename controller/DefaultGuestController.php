@@ -27,5 +27,10 @@ class DefaultGuestController {
 		$this->loadPage("contact");
 	}
 
+	function events(){
+		$evenements = $this->guestManager->getEvents();
+		$this->loadPage("events", array("evenements" => $evenements));
+	}
+
 
 }
