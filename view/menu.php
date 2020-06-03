@@ -18,7 +18,4 @@
             </div>
         </div>
     </li>
-    <li>
-        <a href="/admin/login">Admin</a>
-    </li>
 </ul>
