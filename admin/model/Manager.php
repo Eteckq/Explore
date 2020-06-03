@@ -3,7 +3,7 @@
 class Manager {
 
 	protected function dbConnect(){
-		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8', 'explore', '5D14!dzDp*d');
+		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8', 'root', 'root');
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $db;
 	}
@@ -30,35 +30,26 @@ class Manager {
 	}
 
 	public function resizeimg($source) {
-		$ext = strtolower(pathinfo($source)['extension']);
-		$pathimg = '..\include\images\uploaded\\' + strtolower(pathinfo($source)['basename']);
+		$ext = strtolower(pathinfo($source['name'], PATHINFO_EXTENSION));
+		$pathimg = '..\include\images\uploaded\\' + strtolower(pathinfo($source['tmp_name'], PATHINFO_BASENAME));
 
-		if (!file_exists($source)) {
-	    	throw new Exception('Source image file not found');
-	  	}
-		else if (!in_array($ext, ["bmp", "gif", "jpg", "jpeg", "png", "webp"])) {
-	    	throw new Exception('Invalid image file type');
-	  	}
-
-		$dimensions = getimagesize($source);
+		$dimensions = getimagesize($source['tmp_name']);
 	  	$width = $dimensions[0];
 	  	$height = $dimensions[1];
 
 		$funcCreate = "imagecreatefrom" . ($ext=="jpg" ? "jpeg" : $ext);
-	  	$funcOutput = "image" . ($ext=="jpg" ? "jpeg" : $ext);
 
-		$original = $funcCreate($source);
+		$original = $funcCreate($source['tmp_name']);
 	  	$resized = imagecreatetruecolor(300, 200);
 
 		imagecopyresampled($resized, $original, 0, 0, 0, 0, 300, 200, $width, $height);
-
-		$funcOutput($resized,$pathimg);
 		imagedestroy($original);
-		imagedestroy($resized);
+
+		return $resized;		//returns resized image (not yet saved as a file)
 	}
 
 	public function uploadImage($file){
-		$imageFileType = pathinfo($file['name'], PATHINFO_EXTENSION);
+		$imageFileType = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
 
 
 		$filename = $this->generateRandomString(10) . "." . $imageFileType;
@@ -72,14 +63,16 @@ class Manager {
 		}
 
 		//resize
+		$img = $this->resizeimg($file);
+		$funcOutput = "image" . ($imageFileType=="jpg" ? "jpeg" : $imageFileType);
 
 		/* Upload file */
-		if (move_uploaded_file($file['tmp_name'], $location)) {
+		if ($funcOutput($img, $location)) {
 			return $filename;
 		} else {
 			return 0;
 		}
-		
+
 	}
 
 	private function generateRandomString($length = 10){
