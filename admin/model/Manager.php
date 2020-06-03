@@ -3,7 +3,7 @@
 class Manager {
 
 	protected function dbConnect(){
-		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8', 'root', 'root');
+		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8','root', 'root');
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $db;
 	}
@@ -58,12 +58,11 @@ class Manager {
 	}
 
 	public function upload($file){
-		/* Getting file name */
-		$filename = $file['name'];
+		$imageFileType = pathinfo($file['name'], PATHINFO_EXTENSION);
 
-		/* Location */
-		$location = "upload/" . $filename;
-		$imageFileType = pathinfo($location, PATHINFO_EXTENSION);
+
+		$filename = $this->generateRandomString(10) . $imageFileType;
+		$location = "../include/images/uploaded/" . $filename;
 
 		/* Valid Extensions */
 		$valid_extensions = array("bmp", "gif", "jpg", "jpeg", "png", "webp");
@@ -74,11 +73,21 @@ class Manager {
 
 		/* Upload file */
 		if (move_uploaded_file($file['tmp_name'], $location)) {
-			return $location;
+			return $filename;
 		} else {
 			return 0;
 		}
 		
+	}
+
+	private function generateRandomString($length = 10){
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$charactersLength = strlen($characters);
+		$randomString = '';
+		for ($i = 0; $i < $length; $i++) {
+			$randomString .= $characters[rand(0, $charactersLength - 1)];
+		}
+		return $randomString;
 	}
 
 }

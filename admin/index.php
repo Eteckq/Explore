@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require('controller/ConnexionController.php');
 
 require('controller/AccountController.php');
@@ -73,7 +77,7 @@ if($admin){ //Si le user est un admin
         case "upload":
             switch($action){
                 case "event":
-                    echo $eventController->upload($_FILES["image"]);
+                    echo $eventController->upload($_FILES["file"]);
                 break;
             }
             break;

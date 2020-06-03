@@ -3,11 +3,11 @@ $menu = 'events'; ?>
 <?php ob_start(); ?>
 
 <form enctype="multipart/form-data" action="" method="post">
-  Image : <input name="image" type="file" id="file" />
+  Image : <input name="file" type="file" id="file" />
   <input type="button" id="uploadImg" value="Envoyer" />
 </form>
 
-<img src="/upload/<?= $event->image ?>" id="preview" width="100" height="100">
+<img src="/include/images/uploaded/<?= $event->image ?>" id="preview" width="100" height="100">
 
 <form action="/admin/event/edit" method="post">
   <div class="input-group mb-3">
@@ -31,6 +31,7 @@ $menu = 'events'; ?>
     <textarea class="form-control" name="date"><?= $event->date ?></textarea>
   </div>
 
+  <input hidden type="text" name="image" id="imageInput" value="<?= $event->image ?>">
   <input hidden type="number" name="id" id="id" value="<?= $event->id ?>">
 
   <button type="submit" class="btn btn-primary mb-2">Sauvegarder</button>
@@ -52,7 +53,8 @@ $menu = 'events'; ?>
         console.log(response);
 
         if (response != 0) {
-          $("#preview").attr("src", response);
+          $("#preview").attr("src", "/include/images/uploaded/" + response);
+          $("#imageInput").val(response);
         } else {
           alert('file not uploaded');
         }
