@@ -26,7 +26,7 @@ if (!isset($menu)) {
 
   <a class="nav-item <?= $menu == 'events' ? "selected" : "" ?>" href="/admin/event">
     <div class="icon">
-      <i class="fas fa-hands-helping"></i>
+      <i class="fas fa-calendar-alt"></i>
     </div>
     <span>Evenements</span>
   </a>
