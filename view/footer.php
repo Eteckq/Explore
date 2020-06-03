@@ -8,7 +8,9 @@
               <div class="col-xs-6 col-md-3">
                   <h6>Liens</h6>
                   <ul class="footer-links">
-                      <li><a href="/">Accueil</a></li>
+                      <li><a href="/accueil">Accueil</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/events">Événements</a></li>
                   </ul>
               </div>
 

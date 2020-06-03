@@ -12,41 +12,6 @@
     <hr class="my-4">
 </article>
 
-<div class="prestations">
-
-    <?php 
-    $i = 0;
-    
-    foreach ($prestations as $prestation) { 
-    $i++;
-    ?>
-    <section>
-        <?php if($i%2 == 0){ ?>
-
-        <div class="image-presta">
-            <i class="fas fa-<?= $prestation->image ?>"></i>
-        </div>
-        <div class="text-presta">
-            <h2><?= $prestation->title ?></h2>
-            <p><?= $prestation->description ?></p>
-        </div>
-        <?php } else { ?>
-        <div class="text-presta">
-            <h2><?= $prestation->title ?></h2>
-            <p><?= $prestation->description ?></p>
-        </div>
-        <div class="image-presta">
-            <i class="fas fa-<?= $prestation->image ?>"></i>
-        </div>
-        <?php } ?>
-    </section>
-    <?php } ?>
-
-
-
-
-</div>
-
 <div id="carouselPartenaires" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -81,10 +46,44 @@
     </a>
 </div>
 
-<script>
-$('.accueil-img').parallax({imageSrc: '/include/images/background.jpg'});
+<div class="prestations">
 
-</script>
+    <?php
+    $i = 0;
+
+    foreach ($prestations as $prestation) {
+    $i++;
+    ?>
+    <a href="/prestation-<?= $prestation->id ?>">
+    <section>
+
+        <?php if($i%2 == 0){ ?>
+
+        <div class="image-presta">
+            <i class="fas fa-<?= $prestation->image ?>"></i>
+        </div>
+        <div class="text-presta">
+            <h2><?= $prestation->title ?></h2>
+            <p><?= $prestation->description ?></p>
+        </div>
+        <?php } else { ?>
+        <div class="text-presta">
+            <h2><?= $prestation->title ?></h2>
+            <p><?= $prestation->description ?></p>
+        </div>
+        <div class="image-presta">
+            <i class="fas fa-<?= $prestation->image ?>"></i>
+        </div>
+        <?php } ?>
+
+    </section>
+    </a>
+    <?php } ?>
+
+
+
+
+</div>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php'); ?>
