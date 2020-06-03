@@ -14,13 +14,15 @@
 
 <div class="prestations">
 
-    <?php 
+    <?php
     $i = 0;
-    
-    foreach ($prestations as $prestation) { 
+
+    foreach ($prestations as $prestation) {
     $i++;
     ?>
+    <a href="/prestation-<?= $prestation->id ?>">
     <section>
+
         <?php if($i%2 == 0){ ?>
 
         <div class="image-presta">
@@ -39,7 +41,9 @@
             <i class="fas fa-<?= $prestation->image ?>"></i>
         </div>
         <?php } ?>
+
     </section>
+    </a>
     <?php } ?>
 
 
@@ -80,11 +84,6 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
-<script>
-$('.accueil-img').parallax({imageSrc: '/include/images/background.jpg'});
-
-</script>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php'); ?>
