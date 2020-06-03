@@ -33,6 +33,7 @@ class GuestManager extends Manager {
 			$event->title = $eventReq["title"];
 			$event->description = $eventReq["description"];
 			$event->date = $eventReq["date"];
+			$event->image = $eventReq["image"];
 
 			$events[] = $event;
 		}
