@@ -114,6 +114,12 @@ h1 {
 
 /* ACCUEIL */
 
+.lead {
+    text-align: justify;
+    margin: auto;
+    width: 80%;
+}
+
 .accueil-img {
   position: relative;
 }
@@ -132,7 +138,9 @@ h1 {
 
 .contactContainer {
     display: flex;
-    margin: 2em;
+    margin: auto;
+    width: 80%;
+    padding-bottom: 2em;
 }
 
 .contactBody{
@@ -144,7 +152,8 @@ h1 {
 
 .prestaContainer {
     display: flex;
-    margin: 2em;
+    margin: auto;
+    width: 80%;
 }
 
 .prestaContainer p {
@@ -190,21 +199,23 @@ section div {
 
 /* Evenements */
 
-.evthead, .evtbody {
+.evenement {
     display: flex;
-    margin : 0;
-    padding: 1em;
-    border-bottom: black solid 3px;
-    align-items: center;
+    flex-direction: column;
+    margin : auto;
+    width: 80%;
 }
 
 .evthead {
+    display: flex;
     align-items: baseline;
     border-bottom: black solid 1px;
 }
 
-.evtbody p {
-    padding: 0 3em;
+.evtbody {
+    display: flex;
+    align-items: center;
+    padding: 1em 3em;
 }
 
 /* FOOTER */

@@ -8,7 +8,13 @@
 
 <article class="Présentation">
     <h1 class="display-4">Explore et Vous</h1>
-    <p class="lead">Cette dernière est une entreprise de marketing et de communication digitale à part entière. L’objectif est d’aider les entreprises de type PME/TPE à se développer numériquement, à établir une stratégie digitale efficace et qualitative afin de leur permettre d’améliorer leur visibilité et leur fidélisation à travers les Nouvelles Techniques de l’Information et de la Communication (NTIC).</p>
+    <p class="lead">Explore et Vous est une entreprise suivant la continuité de développement du réseau Explore. En effet, Explore est un réseau communautaire sur Instagram développé sur plusieurs régions dont notamment la région Auvergne-Rhône Alpes
+        ayant pour but de promouvoir les paysages, les entreprises et les activités locales régionales. Nous souhaitons la création d’un site internet spécifique pour l’entreprise Explore et Vous. Cette dernière est une entreprise de marketing et de
+        communication digitale à part entière. L’objectif est d’aider les entreprises de type PME/TPE à se développer numériquement, à établir une stratégie digitale efficace et qualitative afin de leur permettre d’améliorer leur visibilité et leur
+        fidélisation à travers les Nouvelles Techniques de l’Information et de la Communication (NTIC). Pour ce faire, Explore et Vous propose différents services tels que de la formation, le Community management propre à son identité, de la mise en
+        avant sur le réseau Explore ou encore la prise de photographie afin de diversifier les formes de communication de chaque partenaire. Cependant chaque client a des envies et des besoins différents, ainsi Explore et Vous assure un suivi régulier
+        après la mise en place des outils afin de montrer aux TPE/PME l’efficacité de leur stratégie web. L’objectif est alors d’adapter notre offre pour chaque demande et souhait de nos clients. C’est pourquoi, l’offre d'Explore et Vous sera réalisée
+        à travers une grille tarifaire et également sur devis afin d’adapter au mieux son offre à chaque client.</p>
     <hr class="my-4">
 </article>
 
