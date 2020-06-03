@@ -70,6 +70,13 @@ if($admin){ //Si le user est un admin
                     break;
             }
             break;
+        case "upload":
+            switch($action){
+                case "event":
+                    echo $eventController->upload($_FILES["image"]);
+                break;
+            }
+            break;
         default: require('view/pages/accueil.php'); break;
     }
 

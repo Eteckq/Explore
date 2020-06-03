@@ -57,4 +57,28 @@ class Manager {
 		imagedestroy($resized);
 	}
 
+	public function upload($file){
+		/* Getting file name */
+		$filename = $file['name'];
+
+		/* Location */
+		$location = "upload/" . $filename;
+		$imageFileType = pathinfo($location, PATHINFO_EXTENSION);
+
+		/* Valid Extensions */
+		$valid_extensions = array("bmp", "gif", "jpg", "jpeg", "png", "webp");
+		/* Check file extension */
+		if (!in_array(strtolower($imageFileType), $valid_extensions)) {
+			return 0;
+		}
+
+		/* Upload file */
+		if (move_uploaded_file($file['tmp_name'], $location)) {
+			return $location;
+		} else {
+			return 0;
+		}
+		
+	}
+
 }

@@ -10,6 +10,7 @@ $menu = 'events'; ?>
       <div class="card" style="max-width: 23rem;">
         <div class="card-header bg-behance content-center pb-2 pt-2" style="color:white">
           <?= $event->title ?>
+          <!-- <?= $event->image ?> -->
         </div>
         <div class="card-body row text-center">
           <div class="col">

@@ -37,4 +37,8 @@ class EventController {
 		$this->eventManager->deleteEvent($id);
 		header('Location: /admin/event/list');
 	}
+
+	function upload($img){
+		return $this->eventManager->upload($img);
+	}
 }
