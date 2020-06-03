@@ -71,6 +71,8 @@ class Manager {
 			return 0;
 		}
 
+		//resize
+
 		/* Upload file */
 		if (move_uploaded_file($file['tmp_name'], $location)) {
 			return $filename;
