@@ -1,18 +1,17 @@
 <?php $title = 'Prestations'; ?>
 <?php ob_start(); ?>
 
-<h1><?= $params["prestation"]->title ?></h1>
-
 <div class="prestaContainer">
-    <div class="image-presta">
-        <i class="fas fa-<?= $params["prestation"]->image ?>"></i>
+    <div class="prestaHead">
+        <h1><?= $params["prestation"]->title ?></h1>
+        <div class="image-presta">
+            <i class="fas fa-<?= $params["prestation"]->image ?>"></i>
+        </div>
     </div>
-    <p><?= $params["prestation"]->description ?></p>
+    <div class="prestaBody">
+        <p><?= $params["prestation"]->description ?></p>
+    </div>
 </div>
-
-
-
-
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/template.php'); ?>

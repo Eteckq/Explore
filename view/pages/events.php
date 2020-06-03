@@ -8,14 +8,14 @@ foreach ($params["evenements"] as $evenement) {
 ?>
     <section>
         <div class="evenement">
-            <div class="evthead">
-                <h2><?= $evenement->title ?>  </h2>
-                <p>  - le <?= $evenement->date ?></p>
-            </div>
-            <div class="evtbody">
+            <div class="evtHead">
+                <div class="evtTitle">
+                    <h2><?= $evenement->title ?>  </h2>
+                    <p>  - le <?= $evenement->date ?></p>
+                </div>
                 <img src="../include/images/uploaded/<?= $evenement->image ?>" alt="">
-                <p><?= $evenement->description ?></p>
             </div>
+            <p><?= $evenement->description ?></p>
         </div>
     </section>
 <?php } ?>
