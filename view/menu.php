@@ -3,7 +3,7 @@
     <a href="/accueil">Accueil</a>
   </li>
   <li>
-    <a href="/contact">Contact</a>
+    <a href="/contact">Qui sommes-nous ?</a>
   </li>
   <li>
     <a href="/events">Evenements</a>
