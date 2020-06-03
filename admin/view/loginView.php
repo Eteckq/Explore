@@ -56,7 +56,7 @@
 									</div>
 									<div class="row">
 									<?php if(isset($_GET["error"])){ ?>
-										<p>ERREUR</p>
+										<p>Identifiants incorrect</p>
 									<?php } ?>
 									</div>
 								</form>

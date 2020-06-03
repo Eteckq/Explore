@@ -1,4 +1,4 @@
-<?php $title = 'Préstation'; $menu = 'prestations'; ?>
+<?php $title = 'Prestation'; $menu = 'prestations'; ?>
 <?php ob_start(); ?>
 
 
