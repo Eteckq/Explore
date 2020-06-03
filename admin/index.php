@@ -37,7 +37,7 @@ if($admin){ //Si le user est un admin
                     $prestationController->deletePrestation($id);
                     break;
                 case "list": default:
-                    $prestationController->prestations();
+                    $prestationController->getPrestations();
                     break;
             }
         break;
@@ -77,7 +77,7 @@ if($admin){ //Si le user est un admin
         case "upload":
             switch($action){
                 case "event":
-                    echo $eventController->upload($_FILES["file"]);
+                    echo $eventController->uploadImage($_FILES["file"]);
                 break;
             }
             break;

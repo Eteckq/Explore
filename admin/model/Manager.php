@@ -3,7 +3,7 @@
 class Manager {
 
 	protected function dbConnect(){
-		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8','root', 'root');
+		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8', 'explore', '5D14!dzDp*d');
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $db;
 	}
@@ -57,7 +57,7 @@ class Manager {
 		imagedestroy($resized);
 	}
 
-	public function upload($file){
+	public function uploadImage($file){
 		$imageFileType = pathinfo($file['name'], PATHINFO_EXTENSION);
 
 

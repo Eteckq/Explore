@@ -9,7 +9,7 @@ class PrestationController {
 		$this->prestationManager = new PrestationManager();
 	}
 
-	function prestations(){
+	function getPrestations(){
 		$prestations = $this->prestationManager->getPrestations();
 		foreach ($prestations as $prestation) {
 			if(strlen($prestation->description) > 30){
