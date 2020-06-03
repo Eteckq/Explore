@@ -2,7 +2,7 @@
           <div class="row">
               <div class="col-sm-12 col-md-6">
                   <h6>à propos</h6>
-                  <p class="text-justify">Explore...</p>
+                  <p class="text-justify">Explore et Vous est une entreprise suivant la continuité de développement du réseau Explore crée en 2018 par Valentin Baudin . En effet, Explore est un réseau communautaire sur Instagram développé sur plusieurs régions à travers toute la France ayant pour but de promouvoir les paysages, les entreprises et les activités locales régionales</p>
               </div>
 
               <div class="col-xs-6 col-md-3">

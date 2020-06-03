@@ -1,10 +1,15 @@
 <?php $title = 'Prestations'; ?>
 <?php ob_start(); ?>
 
-<!-- On aura peut être une image dans le future, à prévoir ? -->
 <h1><?= $params["prestation"]->title ?></h1>
 
-<p><?= $params["prestation"]->description ?></p>
+<div class="prestaContainer">
+    <div class="image-presta">
+        <i class="fas fa-<?= $params["prestation"]->image ?>"></i>
+    </div>
+    <p><?= $params["prestation"]->description ?></p>
+</div>
+
 
 
 

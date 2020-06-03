@@ -128,7 +128,29 @@ h1 {
   color: white;
 }
 
+/* Qui sommes-nous ? */
+
+.contactContainer {
+    display: flex;
+    margin: 2em;
+}
+
+.contactBody{
+    padding: 2em 0 0 2em;
+    text-align: justify;
+}
+
 /* prestations */
+
+.prestaContainer {
+    display: flex;
+    margin: 2em;
+}
+
+.prestaContainer p {
+    padding: 1em 0 0 2em;
+    text-align: justify;
+}
 
 .prestations {
   width: 80%;
@@ -164,6 +186,25 @@ section div {
 
 .carroussel {
   background-color: inherit;
+}
+
+/* Evenements */
+
+.evthead, .evtbody {
+    display: flex;
+    margin : 0;
+    padding: 1em;
+    border-bottom: black solid 3px;
+    align-items: center;
+}
+
+.evthead {
+    align-items: baseline;
+    border-bottom: black solid 1px;
+}
+
+.evtbody p {
+    padding: 0 3em;
 }
 
 /* FOOTER */

@@ -44,7 +44,7 @@
 									</div>
 									<div class="custom-control custom-checkbox mb-4">
 										<input type="checkbox" class="custom-control-input" name="remember" id="remember">
-										<label class="custom-control-label" for="remember">Se sourvenir de moi</label>
+										<label class="custom-control-label" for="remember">Se souvenir de moi</label>
 									</div>
 									<div class="row">
 										<div class="col-6">
@@ -56,7 +56,7 @@
 									</div>
 									<div class="row">
 									<?php if(isset($_GET["error"])){ ?>
-										<p>Identifiants incorrect</p>
+										<p>Identifiants incorrects</p>
 									<?php } ?>
 									</div>
 								</form>

@@ -8,7 +8,7 @@
 
 <article class="Présentation">
     <h1 class="display-4">Explore et Vous</h1>
-    <p class="lead">L'entreprise Explore</p>
+    <p class="lead">Cette dernière est une entreprise de marketing et de communication digitale à part entière. L’objectif est d’aider les entreprises de type PME/TPE à se développer numériquement, à établir une stratégie digitale efficace et qualitative afin de leur permettre d’améliorer leur visibilité et leur fidélisation à travers les Nouvelles Techniques de l’Information et de la Communication (NTIC).</p>
     <hr class="my-4">
 </article>
 
