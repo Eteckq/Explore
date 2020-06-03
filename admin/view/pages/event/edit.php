@@ -25,6 +25,13 @@ $menu = 'events'; ?>
     <textarea class="form-control" name="date"><?= $event->date ?></textarea>
   </div>
 
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Image</span>
+    </div>
+    <textarea class="form-control" name="image"><?= $event->image ?></textarea>
+  </div>
+
   <input hidden type="number" name="id" id="id" value="<?= $event->id ?>">
 
   <button type="submit" class="btn btn-primary mb-2">Sauvegarder</button>

@@ -9,6 +9,7 @@ foreach ($params["evenements"] as $evenement) {
             <h2><?= $evenement->title ?></h2>
             <p><?= $evenement->description ?></p>
             <p><?= $evenement->date ?></p>
+            <img src="/images/<?= $evenement->image ?>" alt="">
         </div>
     </section>
 <?php } ?>
