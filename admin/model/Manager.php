@@ -61,7 +61,7 @@ class Manager {
 		$imageFileType = pathinfo($file['name'], PATHINFO_EXTENSION);
 
 
-		$filename = $this->generateRandomString(10) . $imageFileType;
+		$filename = $this->generateRandomString(10) . "." . $imageFileType;
 		$location = "../include/images/uploaded/" . $filename;
 
 		/* Valid Extensions */
