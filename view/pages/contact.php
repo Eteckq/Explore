@@ -1,7 +1,7 @@
 <?php $title = 'Contact'; ?>
 <?php ob_start(); ?>
 
-<h1>Contactez nous</h1>
+<h1>Qui sommes-nous ?</h1>
 
 <div class="container">
     <div class="row">
