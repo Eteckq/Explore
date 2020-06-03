@@ -38,7 +38,7 @@ class EventController {
 		header('Location: /admin/event/list');
 	}
 
-	function upload($img){
-		return $this->eventManager->upload($img);
+	function uploadImage($img){
+		return $this->eventManager->uploadImage($img);
 	}
 }
