@@ -12,6 +12,40 @@
     <hr class="my-4">
 </article>
 
+<div id="carouselPartenaires" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://fakeimg.pl/1000x300/" height="300px" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Partenaire 1</h5>
+                <p>bla bla bla</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://fakeimg.pl/1000x300/" height="300px" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Partenaire 2</h5>
+                <p>bla bla bla</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://fakeimg.pl/1000x300/" height="300px" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Partenaire 3</h5>
+                <p>bla bla bla</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselPartenaires" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselPartenaires" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
 <div class="prestations">
 
     <?php
@@ -49,40 +83,6 @@
 
 
 
-</div>
-
-<div id="carouselPartenaires" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="https://fakeimg.pl/1000x300/" height="300px" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Partenaire 1</h5>
-                <p>bla bla bla</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="https://fakeimg.pl/1000x300/" height="300px" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Partenaire 2</h5>
-                <p>bla bla bla</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="https://fakeimg.pl/1000x300/" height="300px" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Partenaire 3</h5>
-                <p>bla bla bla</p>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselPartenaires" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselPartenaires" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>
 
 <?php $content = ob_get_clean(); ?>

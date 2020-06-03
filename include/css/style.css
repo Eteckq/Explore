@@ -99,6 +99,11 @@ body {
   margin: auto;
 }
 
+.prestations a, .prestations a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .prestations section {
   background-color: #F2F2F0;
   width: 100%;
