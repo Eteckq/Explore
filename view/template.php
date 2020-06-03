@@ -20,7 +20,7 @@
 <body>
 
 	<header>
-		<a href="/admin/login"><i style="margin: 15px; color: #d9ad00; font-size: 2dp" class="fas fa-key"></i></a>
+		<a href="/admin/login"><i style="margin: 15px; color: #d9ad00; position: absolute;" class="fas fa-key"></i></a>
 		<div class="logo">
 			<img src="/include/images/logo.svg" alt="Explore logo" width="250px" height="250px" />
 		</div>
