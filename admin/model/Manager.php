@@ -3,7 +3,7 @@
 class Manager {
 
 	protected function dbConnect(){
-		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8', 'root', 'root');
+		$db = new PDO('mysql:host=localhost;dbname=explore;charset=utf8','root', 'root');
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $db;
 	}
@@ -31,7 +31,7 @@ class Manager {
 
 	public function resizeimg($source) {
 		$ext = strtolower(pathinfo($source['name'], PATHINFO_EXTENSION));
-		$pathimg = '..\include\images\uploaded\\' + strtolower(pathinfo($source['tmp_name'], PATHINFO_BASENAME));
+		$pathimg = '../include/images/uploaded/' . strtolower(pathinfo($source['tmp_name'], PATHINFO_BASENAME));
 
 		$dimensions = getimagesize($source['tmp_name']);
 	  	$width = $dimensions[0];
