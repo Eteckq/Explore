@@ -15,6 +15,7 @@ class EventManager extends Manager {
 			$event->title = $eventReq["title"];
 			$event->description = $eventReq["description"];
 			$event->date = $eventReq["date"];
+			$event->image = $eventReq["image"];
 
 			$events[] = $event;
 		}
@@ -33,6 +34,7 @@ class EventManager extends Manager {
 		$event->title = $eventReq["title"];
 		$event->description = $eventReq["description"];
 		$event->date = $eventReq["date"];
+		$event->image = $eventReq["image"];
 
     	return $event;
 	}
@@ -41,28 +43,30 @@ class EventManager extends Manager {
 		return new Evenement(0);
 	}
 
-	public function createEvent($title,$description, $date){
+	public function createEvent($title,$description,$date, $image){
 		$db = $this->dbConnect();
-	    $req = $db->prepare('INSERT INTO `events` (`title`, `description`, `date`) VALUES (:title, :description, :date)');
+	    $req = $db->prepare('INSERT INTO `events` (`title`, `description`, `date`, `image`) VALUES (:title, :description, :date, :image)');
 	    if (strlen($description) <= 1 || strlen($title) <= 1) {
 	    	//exception
 	    } else {
 		    $req->execute(array(
 		    	':title' => htmlspecialchars($title),
 		    	':description' => htmlspecialchars($description),
-				':date' => htmlspecialchars($date)
+				':date' => htmlspecialchars($date),
+				':image' => htmlspecialchars($image)
 			));
 		}
 	}
 
-	public function editEvent($id, $title,$description, $date){
+	public function editEvent($id, $title,$description,$date, $image){
 		$db = $this->dbConnect();
-		$req = $db->prepare('UPDATE `events` SET title = :title, description = :description, date = :date WHERE (`id` = :id)');
+		$req = $db->prepare('UPDATE `events` SET title = :title, description = :description, date = :date, image = :image WHERE (`id` = :id)');
 		$req->execute(array(
 			':id' => $id,
 			':title' => $title,
 			':description' => $description,
 			':date' => $date,
+			':image' => $image,
 		));
 	}
 

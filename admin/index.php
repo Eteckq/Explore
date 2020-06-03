@@ -59,7 +59,7 @@ if($admin){ //Si le user est un admin
                     $eventController->getEvent($id);
                     break;
                 case "edit":
-                    $eventController->editEvent($_POST["id"], $_POST["title"], $_POST["description"], $_POST["date"]);
+                    $eventController->editEvent($_POST["id"], $_POST["title"], $_POST["description"], $_POST["date"], $_POST["image"]);
                     break;
                 case "delete":
                     $eventController->deleteEvent($id);
