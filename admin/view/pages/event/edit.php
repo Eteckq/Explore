@@ -28,7 +28,7 @@ $menu = 'events'; ?>
     <div class="input-group-prepend">
       <span class="input-group-text">Date</span>
     </div>
-    <input type="date" class="form-control" id="date" name="date">
+    <input type="date" class="form-control" id="date" name="date" value="<?= $event->date ?>">
   </div>
 
   <input hidden type="text" name="image" id="imageInput" value="<?= $event->image ?>">
