@@ -143,6 +143,10 @@ h1 {
     padding-bottom: 2em;
 }
 
+.contactContainer img {
+    width: 400px;
+}
+
 .contactBody{
     padding: 2em 0 0 2em;
     text-align: justify;
@@ -212,10 +216,6 @@ section div {
     margin-bottom: 2em;
 }
 
-.evenement p {
-    padding-top: 1em;
-}
-
 .evtHead {
     display: flex;
     flex-direction: column;
@@ -227,6 +227,13 @@ section div {
     display: flex;
     align-items: baseline;
     border-bottom: black solid 1px;
+}
+
+.evtBody {
+    width: 65%;
+    margin: auto;
+    padding-top: 5em;
+    text-align: left;
 }
 
 /* FOOTER */

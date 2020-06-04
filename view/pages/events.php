@@ -15,7 +15,9 @@ foreach ($params["evenements"] as $evenement) {
                 </div>
                 <img src="../include/images/uploaded/<?= $evenement->image ?>" alt="">
             </div>
-            <p><?= $evenement->description ?></p>
+            <div class="evtBody">
+                <p><?= $evenement->description ?></p>
+            </div>
         </div>
     </section>
 <?php } ?>
